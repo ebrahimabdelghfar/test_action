@@ -1,1 +1,13 @@
-
+name: Build STM32CubeIDE Project
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+    - uses: xanderhendriks/action-build-stm32cubeide@v10.0
+    with:
+        project-path: 'applications/sample_application/targets/STM32'
+        project-target: 'sample_application/Debug'
